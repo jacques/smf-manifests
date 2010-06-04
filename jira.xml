@@ -18,20 +18,20 @@
       <service_fmri value='svc:/milestone/sysconfig'/>
     </dependency>
     <exec_method name='start' type='method' exec='/home/jira/atlassian-jira-enterprise-4.0.1-standalone/bin/startup.sh' timeout_seconds='60'>
-
     <method_context working_directory='/home/jira/atlassian-jira-enterprise-4.0.1-standalone' project='default'>
       <method_credential user='jira' group='jira'/>
       <method_environment>
         <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
+        <envvar name='JAVA_HOME' value='/usr'/>
       </method_environment>
     </method_context>
     </exec_method>
     <exec_method name='stop' type='method' exec='/home/jira/atlassian-jira-enterprise-4.0.1-standalone/bin/shutdown.sh' timeout_seconds='60'>
     <method_context working_directory='/home/jira/atlassian-jira-enterprise-4.0.1-standalone' project='default'>
-
       <method_credential user='jira' group='jira'/>
       <method_environment>
         <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
+        <envvar name='JAVA_HOME' value='/usr'/>
       </method_environment>
     </method_context>
     </exec_method>
@@ -42,7 +42,7 @@
     <stability value='Evolving'/>
     <template>
       <common_name>
-        <loctext xml:lang='C'>JIRA</loctext>
+        <loctext xml:lang='C'>Atlassian JIRA</loctext>
       </common_name>
     </template>
   </service>

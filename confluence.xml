@@ -21,6 +21,7 @@
       <method_credential user='confluence' group='confluence'/>
       <method_environment>
         <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
+        <envvar name='JAVA_HOME' value='/usr'/>
       </method_environment>
     </method_context>
     </exec_method>
@@ -29,6 +30,7 @@
       <method_credential user='confluence' group='confluence'/>
       <method_environment>
         <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
+        <envvar name='JAVA_HOME' value='/usr'/>
       </method_environment>
     </method_context>
     </exec_method>
