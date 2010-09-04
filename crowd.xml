@@ -16,8 +16,8 @@
     <dependency name='milestone' grouping='require_all' restart_on='none' type='service'>
       <service_fmri value='svc:/milestone/sysconfig'/>
     </dependency>
-    <exec_method name='start' type='method' exec='/home/crowd/atlassian-crowd-2.0.3/start_crowd.sh' timeout_seconds='240'>
-    <method_context working_directory='/home/crowd/atlassian-crowd-2.0.3' project='default'>
+    <exec_method name='start' type='method' exec='/home/crowd/atlassian-crowd-2.0.7/start_crowd.sh' timeout_seconds='240'>
+    <method_context working_directory='/home/crowd/atlassian-crowd-2.0.7' project='default'>
       <method_credential user='crowd' group='crowd'/>
       <method_environment>
         <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
