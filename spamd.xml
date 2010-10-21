@@ -16,7 +16,7 @@
     <dependency name='milestone' grouping='require_all' restart_on='none' type='service'>
       <service_fmri value='svc:/milestone/sysconfig'/>
     </dependency>
-    <exec_method name='start' type='method' exec='/opt/local/bin/spamd -c -Q -A 127.0.0.1 -q -x -u spamd -H /var/spool/spamd -m 10 -d -r /var/run/spamd/spamd.pid' timeout_seconds='60'>
+    <exec_method name='start' type='method' exec='/opt/local/bin/spamd -c -Q -A 127.0.0.1 -q -x -u spamd -H /var/spool/spamd -m 10 -d --syslog-socket=native -r /var/run/spamd/spamd.pid' timeout_seconds='60'>
     <method_context working_directory='/var/spool/spamd' project='default'>
       <method_credential user='root' group='root'/>
       <method_environment>
