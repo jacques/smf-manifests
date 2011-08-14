@@ -16,21 +16,23 @@
     <dependency name='milestone' grouping='require_all' restart_on='none' type='service'>
       <service_fmri value='svc:/milestone/sysconfig'/>
     </dependency>
-    <exec_method name='start' type='method' exec='/home/crowd/atlassian-crowd-2.2.2/start_crowd.sh' timeout_seconds='240'>
-    <method_context working_directory='/home/crowd/atlassian-crowd-2.2.2' project='default'>
+    <exec_method name='start' type='method' exec='/home/crowd/atlassian-crowd-2.3.1/start_crowd.sh' timeout_seconds='240'>
+    <method_context working_directory='/home/crowd/atlassian-crowd-2.3.1' project='default'>
       <method_credential user='crowd' group='crowd'/>
       <method_environment>
         <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
-        <envvar name='JAVA_HOME' value='/usr'/>
+        <envvar name='JAVA_HOME' value='/opt/java/latest'/>
+        <envvar name='JDK_HOME' value='/opt/java/latest'/>
       </method_environment>
     </method_context>
     </exec_method>
-    <exec_method name='stop' type='method' exec='/home/crowd/atlassian-crowd-2.2.2/stop_crowd.sh' timeout_seconds='60'>
-      <method_context working_directory='/home/crowd/atlassian-crowd-2.2.2' project='default'>
+    <exec_method name='stop' type='method' exec='/home/crowd/atlassian-crowd-2.3.1/stop_crowd.sh' timeout_seconds='60'>
+      <method_context working_directory='/home/crowd/atlassian-crowd-2.3.1' project='default'>
         <method_credential user='crowd' group='crowd'/>
         <method_environment>
           <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
-          <envvar name='JAVA_HOME' value='/usr'/>
+          <envvar name='JAVA_HOME' value='/opt/java/latest'/>
+          <envvar name='JDK_HOME' value='/opt/java/latest'/>
         </method_environment>
       </method_context>
     </exec_method>
