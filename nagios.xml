@@ -20,7 +20,7 @@
       <service_fmri value='file:///opt/local/etc/nagios/nagios.cfg'/>
     </dependency>
     <exec_method name='start' type='method' exec='/opt/local/bin/nagios -d /opt/local/etc/nagios/nagios.cfg' timeout_seconds='60'>
-    <method_context working_directory='/var/spool/exim' project='default'>
+    <method_context working_directory='/tmp' project='default'>
       <method_credential user='root' group='root'/>
       <method_environment>
         <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
