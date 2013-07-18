@@ -11,6 +11,7 @@ Manifests exist for:
  * Confluence
  * Crowd
  * Exim
+ * ISC dhcpd
  * JIRA
  * Nagios
  * OpenLDAP Server
