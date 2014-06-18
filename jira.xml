@@ -16,23 +16,23 @@
     <dependency name='milestone' grouping='require_all' restart_on='none' type='service'>
       <service_fmri value='svc:/milestone/sysconfig'/>
     </dependency>
-    <exec_method name='start' type='method' exec='/home/jira/atlassian-jira-5.1.3/bin/startup.sh' timeout_seconds='60'>
-      <method_context working_directory='/home/jira/atlassian-jira-5.1.3' project='default'>
+    <exec_method name='start' type='method' exec='/home/jira/atlassian-jira-6.2.7-standalone/bin/startup.sh' timeout_seconds='60'>
+      <method_context working_directory='/home/jira/atlassian-jira-6.2.7-standalone' project='default'>
         <method_credential user='jira' group='jira'/>
         <method_environment>
           <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
-          <envvar name='JAVA_HOME' value='/opt/java/latest'/>
-          <envvar name='JDK_HOME' value='/opt/java/latest'/>
+          <envvar name='JAVA_HOME' value='/opt/local'/>
+          <envvar name='JDK_HOME' value='/opt/local'/>
         </method_environment>
       </method_context>
     </exec_method>
-    <exec_method name='stop' type='method' exec='/home/jira/atlassian-jira-5.1.3/bin/shutdown.sh' timeout_seconds='60'>
-      <method_context working_directory='/home/jira/atlassian-jira-5.1.3' project='default'>
+    <exec_method name='stop' type='method' exec='/home/jira/atlassian-jira-6.2.7-standalone/bin/shutdown.sh' timeout_seconds='60'>
+      <method_context working_directory='/home/jira/atlassian-jira-6.2.7-standalone' project='default'>
         <method_credential user='jira' group='jira'/>
         <method_environment>
           <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/xpg4/bin:/usr/bin:/usr/sbin:/usr/sfw/bin:/usr/openwin/bin:/opt/SUNWspro/bin:/usr/ccs/bin'/>
-          <envvar name='JAVA_HOME' value='/opt/java/latest'/>
-          <envvar name='JDK_HOME' value='/opt/java/latest'/>
+          <envvar name='JAVA_HOME' value='/opt/local'/>
+          <envvar name='JDK_HOME' value='/opt/local'/>
         </method_environment>
       </method_context>
     </exec_method>
